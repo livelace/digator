@@ -16,3 +16,5 @@ docker-compose up
 
 Navigate to [http://127.0.0.1:9090](http://127.0.0.1:9090) for Label Studio UI data importing/labeling.
 
+![label-studio](assets/case1.png)
+
