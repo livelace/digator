@@ -1,0 +1,14 @@
+<View>
+  <Labels name="label" toName="text">
+    <Label value="GPE" background="green"/>
+    <Label value="PER" background="#842"/>
+    <Label value="ORG" background="purple"/>
+    <Label value="LOC" background="darkblue"/>
+    <Label value="DATE" background="red"/>
+    <Label value="FAC" background="orange"/>
+    <Label value="EVENT" background="darkorange"/>
+    <Label value="MONEY" background="blue"/>
+    <Label value="TIME" background="#428"/>
+  </Labels>
+  <Text name="text" value="$text"/>
+</View>
