@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   digator-label-studio:
-    image: "docker.io/livelace/digator-label-studio:digator_opennlp"
+    image: "ghcr.io/livelace/digator-label-studio:digator_opennlp"
     environment:
       #DIGATOR_LOG_LEVEL: "DEBUG"
       DIGATOR_OPENNLP_URL: "http://digator-opennlp:8080/ner/news/ru/combined?format=label-studio"
@@ -10,7 +10,7 @@ services:
       - "7070:9090"
 
   digator-opennlp:
-    image: "docker.io/livelace/digator-opennlp:master-1.8.4"
+    image: "ghcr.io/livelace/digator-opennlp:master-1.8.4"
     environment:
       LANG: "ru_RU.UTF-8"
       #QUARKUS_LOG_LEVEL: "DEBUG"
