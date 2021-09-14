@@ -4,7 +4,7 @@ services:
     image: "ghcr.io/livelace/digator-label-studio:digator_opennlp"
     environment:
       #DIGATOR_LOG_LEVEL: "DEBUG"
-      DIGATOR_OPENNLP_URL: "http://digator-opennlp:8080/ner/news/ru/combined?format=label-studio"
+      DIGATOR_OPENNLP_URL: "http://digator-opennlp:8080/ner/news/ru/all?format=label-studio"
       DIGATOR_SSL_VERIFY: "false"
     ports:
       - "7070:9090"
