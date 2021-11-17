@@ -6,7 +6,7 @@
 2. [digator-label-studio](https://github.com/livelace/digator-label-studio) - ML backends for [Label Studio](https://github.com/heartexlabs/label-studio). 
 <br>
 
-### Usage examples:
+### Examples:
 
 | Name                                                    | Description                                                   |
 | :------------------------------------------------------ | :------------------------------------------------------------ |
