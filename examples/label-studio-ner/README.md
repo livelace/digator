@@ -13,4 +13,4 @@ docker-compose up
 
 2. Navigate to [http://127.0.0.1:9090](http://127.0.0.1:9090) for data labeling.
 <br><br>
-![label-studio](../../assets/case1.png)
+![label-studio](assets/overview.png)

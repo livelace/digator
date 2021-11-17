@@ -11,3 +11,6 @@ cd /tmp/digator/examples/gosquito-ner
 docker-compose up
 ```
 
+2. See extracted entities in console output.
+<br><br>
+![gosquito](assets/overview.png)
