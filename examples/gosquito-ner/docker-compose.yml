@@ -13,7 +13,7 @@ services:
       - "8081:8080"
 
   digator-opennlp:
-    image: "ghcr.io/livelace/digator-opennlp:v1.2.0-1.8.4"
+    image: "ghcr.io/livelace/digator-opennlp:v1.2.0-1.9.2"
     environment:
       LANG: "ru_RU.UTF-8"
       #QUARKUS_LOG_LEVEL: "DEBUG"
