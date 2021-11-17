@@ -39,7 +39,7 @@ flow:
       params:
         input:  ["data.array0"]
         output: ["data.array1"]
-        target: "https://digator/ner/news/ru/per?format=label-array"
+        target: "http://digator-opennlp:8080/ner/news/ru/per?format=label-array"
         method: "POST"
         body: '{"text": "{{ .ITER.VALUE | ToEscape }}"}'
         headers:
