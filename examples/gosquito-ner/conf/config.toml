@@ -1,0 +1,6 @@
+[default]
+
+log_level = "INFO"
+
+flow_conf = "/etc/gosquito/flows"
+flow_data = "/tmp"

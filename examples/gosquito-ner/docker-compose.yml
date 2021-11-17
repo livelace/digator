@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  gosquito:
+    image: "ghcr.io/livelace/gosquito:v3.0.0"
+    volumes:
+      - type: "bind"
+        source: "./conf"
+        target: "/etc/gosquito"
+
+  girie:
+    image: "ghcr.io/livelace/girie:v1.5.0"
+    ports:
+      - "8081:8080"
+
+  digator-opennlp:
+    image: "ghcr.io/livelace/digator-opennlp:master-1.8.4"
+    environment:
+      LANG: "ru_RU.UTF-8"
+      #QUARKUS_LOG_LEVEL: "DEBUG"
+    ports:
+      - "8082:8080"

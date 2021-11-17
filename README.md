@@ -6,15 +6,11 @@
 2. [digator-label-studio](https://github.com/livelace/digator-label-studio) - ML backends for [Label Studio](https://github.com/heartexlabs/label-studio). 
 <br>
 
-#### Case 1. Automatic NER labeling with Label Studio and OpenNLP ML backend:
+### Usage examples:
 
-```shell
-git clone https://github.com/livelace/digator /tmp/digator
-cd /tmp/digator/case1
-docker-compose up
-```
+| Name                                                    | Description                                                   |
+| :------------------------------------------------------ | :------------------------------------------------------------ |
+| [gosquito-ner](examples/gosquito-ner/README.md)         | NER extraction from RSS feeds.                                |
+| [label-studio-ner](examples/label-studio-ner/README.md) | NER labeling with Label Studio and OpenNLP backend.           |
 
-Navigate to [http://127.0.0.1:9090](http://127.0.0.1:9090) for Label Studio UI data importing/labeling.
-
-![label-studio](assets/case1.png)
 

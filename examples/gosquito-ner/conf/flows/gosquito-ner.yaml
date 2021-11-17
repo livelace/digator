@@ -1,0 +1,66 @@
+flow:
+  name: "gosquito-ner"
+  params:
+    interval: "5m"
+
+  input:
+    plugin: "rss"
+    params:
+      force: true
+      force_count: 10
+      input: [
+        "https://iz.ru/xml/rss/all.xml",
+        "https://tass.ru/rss/v2.xml",
+        "https://www.interfax.ru/rss.asp"
+      ]
+
+  process:
+    - id: 0
+      plugin: "resty"
+      alias: "send rss link to girie"
+      params:
+        input:  ["rss.link"]
+        output: ["data.text0"]
+        target: "http://girie:8080/api"
+        params:
+          query: '{data(url:"{{ .ITER.VALUE }}"){article{text_spans{lang,text,tokens_amount}}}}'
+
+    - id: 1
+      plugin: "jq"
+      alias: "extract spans"
+      params:
+        input:  ["data.text0"]
+        output: ["data.array0"]
+        query:  [".data.article.text_spans[].text"]
+
+    - id: 2
+      plugin: "resty"
+      alias: "send spans to digator"
+      params:
+        input:  ["data.array0"]
+        output: ["data.array1"]
+        target: "https://digator/ner/news/ru/per?format=label-array"
+        method: "POST"
+        body: '{"text": "{{ .ITER.VALUE | ToEscape }}"}'
+        headers:
+          "Content-Type": "application/json"
+
+    - id: 3
+      plugin: "jq"
+      alias: "extract persons"
+      params:
+        input:  [
+          "data.array1"
+        ]
+        output: [
+          "data.array2"
+        ]
+        query:  [
+          ".result[].PER"
+        ]
+
+    - id: 4
+      plugin: "echo"
+      alias: "show persons"
+      params:
+        input: ["data.array2"]
