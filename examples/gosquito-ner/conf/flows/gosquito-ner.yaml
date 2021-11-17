@@ -7,7 +7,7 @@ flow:
     plugin: "rss"
     params:
       force: true
-      force_count: 10
+      force_count: 1
       input: [
         "https://iz.ru/xml/rss/all.xml",
         "https://tass.ru/rss/v2.xml",
