@@ -49,15 +49,9 @@ flow:
       plugin: "jq"
       alias: "extract persons"
       params:
-        input:  [
-          "data.array1"
-        ]
-        output: [
-          "data.array2"
-        ]
-        query:  [
-          ".result[].PER"
-        ]
+        input:  ["data.array1"]
+        output: ["data.array2"]
+        query:  [".result[].PER"]
 
     - id: 4
       plugin: "echo"
