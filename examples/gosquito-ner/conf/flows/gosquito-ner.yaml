@@ -10,8 +10,8 @@ flow:
       force_count: 10
       input: [
         #"https://iz.ru/xml/rss/all.xml",
-        #"https://tass.ru/rss/v2.xml",
-        "https://www.interfax.ru/rss.asp"
+        "https://tass.ru/rss/v2.xml",
+        #"https://www.interfax.ru/rss.asp"
       ]
 
   process:
