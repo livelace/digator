@@ -1,6 +1,6 @@
 #### Description:
 
-Connect [digator-opennlp](https://github.com/livelace/digator-opennlp) backend to [label-studio](https://labelstud.io/) for automatic NER labeling.
+Fetch RSS feeds with [gosquito](https://github.com/livelace/gosquito.git), extract main article with [girie](https://github.com/livelace/girie.git), extract NER entities with [digator-opennlp](https://github.com/livelace/digator-opennlp.git). 
 
 #### Quick start:
 
