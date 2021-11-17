@@ -7,11 +7,11 @@ flow:
     plugin: "rss"
     params:
       force: true
-      force_count: 10
+      force_count: 30
       input: [
-        #"https://iz.ru/xml/rss/all.xml",
+        "https://iz.ru/xml/rss/all.xml",
         "https://tass.ru/rss/v2.xml",
-        #"https://www.interfax.ru/rss.asp"
+        "https://www.interfax.ru/rss.asp"
       ]
 
   process:
