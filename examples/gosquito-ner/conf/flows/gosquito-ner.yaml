@@ -18,7 +18,7 @@ flow:
     - id: 0
       plugin: "resty"
       alias: "send rss link to girie"
-      params:pos
+      params:
         input:  ["rss.link"]
         output: ["data.text0"]
         target: "http://girie:8080/api"
